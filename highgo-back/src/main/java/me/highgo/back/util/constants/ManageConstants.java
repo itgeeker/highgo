@@ -1,4 +1,4 @@
-package me.highgo.back.util;
+package me.highgo.back.util.constants;
 
 /**
  * ManageConstants.java
@@ -10,4 +10,5 @@ package me.highgo.back.util;
 public class ManageConstants {
 
     public static final String MANAGE_SESSION_USER_INFO = "manage_session_user_info";//用户信息
+
 }

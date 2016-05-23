@@ -1,0 +1,30 @@
+#server
+server:
+  port: 8080
+
+#spring
+spring:
+  #datasource
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/highgo
+    username: root
+    password: root
+
+  #freemarker
+  freemarker:
+      cache: false
+      check-template-location: true
+      content-type: text/html
+      suffix: .ftl
+      template-loader-path: classpath:/templates/
+
+  #resources
+  resources:
+    static-locations: classpath:/static/
+
+#mybatis
+mybatis:
+  check-config-location: true
+  config-location: classpath:mybatis/mybatis-conf.xml
+  mapper-locations: classpath*:mybatis/mapper/*.xml

@@ -3,7 +3,7 @@ package me.highgo.back.mapper;
 import me.highgo.back.model.Manager;
 import org.apache.ibatis.annotations.Param;
 
-public interface UserMapper {
+public interface ManagerMapper {
     int deleteByPrimaryKey(Integer id);
 
     int insert(Manager record);

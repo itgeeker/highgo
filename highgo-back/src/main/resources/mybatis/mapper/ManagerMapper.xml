@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="me.highgo.back.mapper.UserMapper" >
+<mapper namespace="me.highgo.back.mapper.ManagerMapper" >
   <resultMap id="BaseResultMap" type="me.highgo.back.model.Manager" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="username" property="username" jdbcType="VARCHAR" />
@@ -25,10 +25,11 @@
     from highgo_user
     where id = #{id,jdbcType=INTEGER}
   </select>
-  <select id="selectByUsernameAndPwd" resultType="me.highgo.back.model.Manager">
-    SELECT *
+  <select id="selectByUsernameAndPwd" resultMap="BaseResultMap">
+    SELECT
+    <include refid="Base_Column_List" />
     FROM highgo_user
-    WHERE username = #{username} AND password = #{password}
+    WHERE username = #{username,jdbcType=VARCHAR} AND password = #{password,jdbcType=CHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from highgo_user

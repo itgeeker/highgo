@@ -1,7 +1,5 @@
 package me.highgo.back.model;
 
-import java.util.List;
-
 public class Role {
     private Integer id;
 
@@ -12,9 +10,6 @@ public class Role {
     private String roleDbprivilege;
 
     private String status;
-
-    //该角色拥有的菜单列表
-    private List<Menu> menuList;
 
     public Integer getId() {
         return id;
@@ -56,11 +51,4 @@ public class Role {
         this.status = status == null ? null : status.trim();
     }
 
-    public List<Menu> getMenuList() {
-        return menuList;
-    }
-
-    public void setMenuList(List<Menu> menuList) {
-        this.menuList = menuList;
-    }
 }

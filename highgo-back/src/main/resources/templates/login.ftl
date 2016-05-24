@@ -11,7 +11,7 @@
                     </h3>
                 </div>
                 <div class="panel-body">
-                    <form role="form" id="formLogin" action="localhost:8080/manage/user/login" method="post">
+                    <form role="form" id="formLogin" action="http://localhost:8080/manage/user/login" method="post">
                         <fieldset>
                             <div class="form-group">
                                 <#if errorMsg??>

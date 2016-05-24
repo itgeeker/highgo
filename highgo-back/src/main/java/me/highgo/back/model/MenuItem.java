@@ -1,11 +1,5 @@
-/**
- * 2012-7-5
- * jqsl2012@163.com
- */
 package me.highgo.back.model;
 
-import net.jeeshop.core.front.SystemManager;
-import net.jeeshop.services.manage.systemSetting.bean.SystemSetting;
 import org.apache.commons.lang.StringUtils;
 
 import java.util.ArrayList;

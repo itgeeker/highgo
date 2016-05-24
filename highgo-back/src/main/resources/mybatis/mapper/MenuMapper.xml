@@ -19,11 +19,11 @@
     from highgo_menu
     where id = #{id,jdbcType=INTEGER}
   </select>
-  <select id="selectByRid" parameterMap="java.lang.Integer" resultType="me.highgo.back.model.Menu">
+  <select id="selectByRid" parameterType="java.lang.Integer" resultType="me.highgo.back.model.Menu">
     select
-    <include refid="Base_Column_List" />
+    highgo_menu.id, pid, url, name, orderNum, type
     FROM highgo_menu,highgo_privilege
-    WHEN highgo_menu.id = highgo_privilege.mid AND rid = #{id,jdbcType=INTEGER}
+    WHERE highgo_menu.id = highgo_privilege.mid AND rid = #{id,jdbcType=INTEGER}
   </select>
 
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >

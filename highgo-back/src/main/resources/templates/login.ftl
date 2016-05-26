@@ -1,8 +1,11 @@
-<#import "htmlBase.ftl" as html>
+<#--import path as hash-->
+<#--path:模板的路径，hash：哈希表变量的结束名称，你可以由他来访问命名空间-->
+<#import "manage/tpl/htmlBase.ftl" as html>
+<#--<@html.htmlBase checkLogin=false jsFiles=["login.js"] /> 使用html变量访问名称空间中的htmlBase函数，参数checkLogin和jsFiles-->
 <@html.htmlBase checkLogin=false jsFiles=["login.js"]>
 <body>
-<div class="container">
-    <div class="row">
+    <div class="container">
+        <div class="row">
         <div class="col-md-4 col-md-offset-4">
             <div class="login-panel panel panel-success">
                 <div class="panel-heading">
@@ -53,6 +56,6 @@
             </div>
         </div>
     </div>
-</div>
+    </div>
 </body>
 </@html.htmlBase>

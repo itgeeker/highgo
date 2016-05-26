@@ -17,4 +17,6 @@ public interface ManagerMapper {
     int updateByPrimaryKey(Manager record);
 
     Manager selectByUsernameAndPwd(@Param("username") String username, @Param("password") String password);
+
+    Manager selectBySelective(Manager manager);
 }

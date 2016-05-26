@@ -123,4 +123,17 @@ public class Manager {
         this.type = type == null ? null : type.trim();
     }
 
+    public void clear() {
+            this.id = null;
+            this.status = null;
+            this.createtime = null;
+            this.updatetime = null;
+            this.createaccount = null;
+            this.updateaccount = null;
+            this.rid = null;
+            this.username = null;
+            this.password = null;
+            nickname = null;
+            email = null;
+    }
 }
